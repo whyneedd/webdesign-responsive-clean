@@ -262,7 +262,7 @@ h4 {
     .humbgermenu.active {
         opacity: 1;
         pointer-events: auto;
-        height: 90vh;
+        height: 100vh;
     }
 
     .humbgermenu {
