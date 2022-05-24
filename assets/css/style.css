@@ -87,7 +87,7 @@ h4 {
     z-index: 999;
     background-color: var(--blue2);
 
-} 
+}
 
 .navbar .logo {
     position: relative;
@@ -159,15 +159,15 @@ h4 {
 }
 
 .container-ctn {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  padding: 50px;
-   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+
 }
 
 .content .container-ctn .content_title {
@@ -200,4 +200,96 @@ h4 {
     color: var(--light);
     font-weight: 600;
     background-color: var(--blue2);
+}
+
+
+@media screen and (max-width: 1114px) {
+
+    .navbar .nav-list {
+        display: none;
+
+    }
+
+    .navbar .logo {
+        display: flex;
+        margin: auto;
+    }
+
+    .navbar .humbger {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+
+        appearance: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        right: 2.5rem;
+        top: 1rem;
+        z-index: 999;
+    }
+
+    .navbar .humbger .bar,
+    .humbger::before,
+    .humbger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 6px 0;
+        border-radius: 5rem;
+        background-color: aliceblue;
+        transition: .3s;
+    }
+
+    .humbger.active::before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+
+    .humbger.active::after {
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+    .humbger.active .bar {
+        opacity: 0;
+    }
+
+    .humbgermenu.active {
+        opacity: 0;
+        pointer-events: none;
+        height: 0;
+    }
+
+    .humbgermenu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90vh;
+        border-radius: 3px;
+        z-index: -1;
+        background-color: var(--moon);
+        transition: .3s;
+
+    }
+
+    .humbgermenu .humbgermenu-ctn {
+        display: inline-block;
+
+    }
+
+    .humbgermenu .humbgermenu-ctn .nav-links {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 1rem;
+        color: var(--light);
+
+    }
 }
