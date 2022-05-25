@@ -292,4 +292,7 @@ h4 {
         color: var(--light);
 
     }
+    .content .container-ctn .content_ctn {
+        width: 200px;
+    } 
 }
